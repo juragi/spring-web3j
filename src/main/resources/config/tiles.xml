@@ -9,7 +9,7 @@
 	    <!-- <put-attribute name="footer" value="/WEB-INF/jsp/main/footerMain.jsp" /> -->
 	</definition>
 	
-	<definition name="main/home" extends="layout">
-	    <put-attribute name="center" value="/WEB-INF/views/home.jsp" />
+	<definition name="*/*" extends="layout">
+	    <put-attribute name="center" value="/WEB-INF/views/{1}/{2}.jsp" />
 	</definition>
 </tiles-definitions>
