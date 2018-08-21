@@ -2,11 +2,21 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 	<a class="navbar-brand" href="/">Start Bootstrap</a>
+	
 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+			<c:if test="${sessionScope.email != null }">
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+					<a class="nav-link">
+						<i class="fa fa-fw fa-lock"></i>
+						<span class="nav-link-text">${sessionScope.email }</span>
+					</a>
+				</li>
+			</c:if>
+			
 			
 			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
 				<a class="nav-link" href="charts.html">
@@ -86,8 +96,14 @@
 				</form>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-				<i class="fa fa-fw fa-sign-out"></i>Logout</a>
+				<c:if test="${sessionScope.email != null }">
+					<a class="nav-link" id='logout' onclick="$.post('logout').done(function(){location.href='/'});">
+					<i class="fa fa-fw fa-sign-out"></i>Logout</a>
+				</c:if>
+				<c:if test="${sessionScope.email == null }">
+					<a class="nav-link" href='login'>
+					<i class="fa fa-fw fa-sign-out"></i>Login/Register</a>
+				</c:if>
 			</li>
 		</ul>
 	</div>

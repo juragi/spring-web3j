@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+		"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd"> 
+
+<mapper namespace="userMapper">
+	<select id="getUserInfo" resultType="HashMap">
+		select idx, 
+			email, 
+			password, 
+			name, 
+			reg_date
+		from userlist
+		where email = #{email}
+	</select>
+	
+	<insert id="registerUser" parameterType="HashMap">
+		insert into userlist (email, password, name) 
+		values (#{email}, #{password}, #{name})
+	</insert>
+</mapper>

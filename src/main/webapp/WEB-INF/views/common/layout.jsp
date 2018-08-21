@@ -18,7 +18,8 @@
 	<!-- Page level plugin CSS-->
 	<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 	<!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+	<link href="css/sb-admin.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 	<tiles:insertAttribute name="head" ignore="true" />
@@ -26,7 +27,7 @@
 		<div class="container-fluid">
 			<script src="vendor/jquery/jquery.min.js"></script>
 			
-			<tiles:insertAttribute name="center" ignore="true" />
+			<tiles:insertAttribute name="center"/>
 			
 			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 			<!-- Core plugin JavaScript-->
