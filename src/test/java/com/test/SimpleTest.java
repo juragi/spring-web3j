@@ -30,6 +30,7 @@ public class SimpleTest {
 		if(!location.exists()) location.mkdir();
 		
 		String result = WalletUtils.generateNewWalletFile("testtest1", location);
+		
 		System.out.println(result);
 		Credentials c = WalletUtils.loadCredentials("testtest1", new File(location.getPath()+ "/" + result));
 		System.out.println(c.getAddress());
