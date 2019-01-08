@@ -196,6 +196,12 @@
 		    <artifactId>tiles-core</artifactId>
 		    <version>3.0.7</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>core</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 	</dependencies>
     <build>
         <plugins>
