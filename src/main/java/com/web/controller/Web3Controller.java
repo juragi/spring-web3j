@@ -31,7 +31,7 @@ public class Web3Controller {
 		if(!saveLocation.exists()) saveLocation.mkdir();
 		
 		String fileName = WalletUtils.generateNewWalletFile(password, saveLocation);
-		Credentials cre = WalletUtils.loadCredentials(password, new File(saveLocation.getPath()+ "/" + result));
+		Credentials cre = WalletUtils.loadCredentials(password, new File(saveLocation.getPath()+ "/" + fileName));
 		String address = cre.getAddress();
 		
 		result.put("fileName", fileName);
