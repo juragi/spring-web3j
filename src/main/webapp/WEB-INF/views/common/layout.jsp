@@ -20,6 +20,8 @@
 	<!-- Custom styles for this template-->
 	<link href="css/sb-admin.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<script src="js/vue.js"></script>
+	<script src="js/web3.min.js"></script>
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 	<tiles:insertAttribute name="head" ignore="true" />
