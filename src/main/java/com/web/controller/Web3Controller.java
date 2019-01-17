@@ -60,4 +60,11 @@ public class Web3Controller {
 		EthUtil ethUtil = new EthUtil();
 		return ethUtil.getTransaction(txid);
 	}
+	
+	@ResponseBody
+	@RequestMapping(value="web3/receipt", method=RequestMethod.POST)
+	public String receipt(@RequestParam String txid) throws IOException {
+		EthUtil ethUtil = new EthUtil();
+		return ethUtil.getReceipt(txid);
+	}
 }
